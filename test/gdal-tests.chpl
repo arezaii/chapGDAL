@@ -29,7 +29,8 @@ proc dumpTiff(name, ref ut) {
     GDALSetRasterNoDataValue(band, -1);
     const bandName = "data-band-" + i:string;
     GDALSetDescription(band, bandName.c_str());
-    GDALRasterIO(band, GF_Write, 0, 0, nx:int(32), nx:int(32), c_ptrTo(ut[..,..,i]), nx:int(32), nx:int(32), GDT_Float32, 0, 0);
+    var a = ut[..,..,i];
+    GDALRasterIO(band, GF_Write, 0, 0, nx:int(32), nx:int(32), c_ptrTo(a), nx:int(32), nx:int(32), GDT_Float32, 0, 0);
   }
   GDALClose(gdalDs);
 }
