@@ -35,3 +35,4 @@ proc dumpTiff(name, ref ut) {
 }
 
 UnitTest.main();
+GDALDestroyDriverManager();
