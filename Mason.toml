@@ -1,0 +1,14 @@
+
+[brick]
+chplVersion = "2.1.0"
+license = "None"
+name = "gdal"
+type = "library"
+version = "0.1.0"
+
+[dependencies]
+
+[system]
+gdal = "*"
+
+
